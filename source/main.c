@@ -25,13 +25,13 @@ unsigned char temp = 0x00;
 
     while (1) {
 temp = PINA & 0x03;  
-if(temp == 0x01) {
-PORTB = 0x01;
+if(temp != 0x01) {
+PORTB = 0x00;
 
 }
 else {
 
-PORTB =0x00; 
+PORTB =0x01; 
 
 }
 }
