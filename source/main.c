@@ -16,21 +16,18 @@ int main(void) {
     /* Insert DDR and PORT initializations */
 	DDRA = 0x00; PORTA = 0xFF; // Configure port A's 8 pins as inputs
 	DDRB = 0xFF; PORTB = 0x00; // Configure port B's 8 pins as outputs, initialize to 0s
-	unsigned char tmpB = 0x00; // Temporary variable to hold the value of B
-	unsigned char tmpA = 0x00; // Temporary variable to hold the value of A
+	unsigned char tmpA = 0x00; // Temporary variable to hold the value of B
+	unsigned char tmpB = 0x00; // Temporary variable to hold the value of A
 
 
     /* Insert your solution below */
 
 
     while (1) {
- tmpA = PINA & 0x01;  
-	if (tmpA == 0x01) { // True if PA0 is 1
-tmpB = (tmpB & 0xFC) | 0x01;
-}else{
-tmpB = (tmpB & 0xFC) | 0x02;
+tmpA = PINA & 0x01;  
+tmpB = PINA & 0x02;
+PORTB = tmpA & !tmpB;
+
 }
-PORTB = tmpB;	
-}
-	 return 0;
+return 0;
 }
