@@ -45,10 +45,10 @@ checkResult
 #expectPORTB 0x02
 #checkResult
 
-test “PINA: 0x02 => PORTB: 0x02”
+test “PINA: 0x02 => PORTB: 0x00”
 setPINA 0x02
 continue 5
-expectPORTB 0x01
+expectPORTB 0x00
 checkResult
 
 test “PINA: 0x01 => PORTB: 0x01”
