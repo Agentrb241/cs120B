@@ -21,7 +21,7 @@ int main(void) {
 unsigned char temp = 0x00;
 
     /* Insert your solution below */
-
+/*
 
     while (1) {
 temp = PINA & 0x03;  
@@ -35,5 +35,16 @@ PORTB =0x01;
 
 }
 }
+*/
+
+unsigned int emptySpace = 0;
+unsigned int j = 0;
+for (unsigned int i = 0; i < 3; i++){
+	while(1){
+		j++;
+	}
+}
+emptySpace = 4 - j;
+
 return 0;
 }
