@@ -35,7 +35,6 @@ PORTB =0x01;
 
 }
 }
-*/
 
 unsigned int emptySpace = 0;
 unsigned int j = 0;
@@ -45,6 +44,32 @@ for (unsigned int i = 0; i < 3; i++){
 	}
 }
 emptySpace = 4 - j;
+*/
+while(1)
+{
+		unsigned char temp = PINA & 0x0F;
+		unsigned char cntavail = 0x04; 
+		if (temp & 0x01) {
+			cntavail = cntavail - 1;
+		}
 
+		if (temp & 0x02) {
+			cntavail = cntavail - 1;
+		}
+
+		if (temp & 0x04) {
+			cntavail = cntavail - 1;
+		}
+
+		if (temp & 0x08) {
+			cntavail = cntavail - 1;
+		}
+
+		PORTC = 0x0F & cntavail;
+}
 return 0;
 }
+
+
+
+

@@ -62,12 +62,6 @@ continue 5
 expectPORTB 0x00
 checkResult
 
-#test "PINA: 0x01 => PORTB: 0x01"
-#setPINA 0x01
-#continue 5
-#expectPORTB 0x01
-#checkResult
-
 test "PINA 0x01 > PORTC: 0x03"
 setPINA 0x01
 continue 5
@@ -79,12 +73,6 @@ setPINA 0x0A
 continue 5
 expectPORTC 0x02
 checkResult
-
-#test "PINA 0x0F > PORTC: 0x01"
-#setPINA 0x0F
-#continue 5
-#expectPORTC 0x01
-#checkResult
 
 set $passed=$tests-$failed
 eval "shell echo Passed %d/%d tests.\n",$passed,$tests
