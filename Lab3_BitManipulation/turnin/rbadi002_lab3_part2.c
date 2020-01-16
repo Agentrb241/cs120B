@@ -51,12 +51,7 @@ while(1)
 		unsigned char fuelLevel = PINA & 0x07;
 		unsigned char light = 0;
 		unsigned char lowFuel = 0;
-//part 3	
-		unsigned char key = GetBit(PINA, 4);
-		unsigned char seat = GetBit(PINA, 5);
-		unsigned char seatbelt = GetBit(PINA, 6);
-		unsigned char fastenbelt = 0;
-	
+		
 		if (fuelLevel == 2 || fuelLevel == 1) {
 			light = 0x20;
 			lowFuel = 0x40;
@@ -79,19 +74,6 @@ while(1)
 			light = 0x3C;
 		}
 		
-//part 3
-		if (seatbelt) {
-			fastenbelt = 0x00;
-		}
-		else {
-			if (seat && key) {
-				fastenbelt = 0x80;
-			}
-			else {
-				fastenbelt = 0x00;
-			}
-		}
-
 
 		PORTC = light | lowFuel;
 	}	
