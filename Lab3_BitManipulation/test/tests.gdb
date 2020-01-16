@@ -49,6 +49,31 @@ continue 5
 expectPORTC 0x02
 checkResult
 
+
+
+test "PINA 0x02  PINB TO  0x03  > PORTC: 0x03"
+setPINA 0x02
+setPINB 0x03
+continue 5
+expectPORTC 0x03
+checkResult
+
+
+
+test "PINA 0x05  PINB TO  0x01  > PORTC: 0x03"
+setPINA 0x05
+setPINB 0x01
+continue 5
+expectPORTC 0x03
+checkResult
+
+
+test "PINA 0x0F  PINB TO  0x02  > PORTC: 0x05"
+setPINA 0x0F
+setPINB 0x02
+continue 5
+expectPORTC 0x05
+checkResult
 # PART2 TESTS
 
 test "PINA 0x01 > PORTC: 0x60"
