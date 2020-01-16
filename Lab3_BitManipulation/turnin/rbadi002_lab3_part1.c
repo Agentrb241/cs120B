@@ -29,12 +29,13 @@ int main(void) {
 		unsigned char tempB = PINB;
 //		button = PINA & 0x01;
   		unsigned char counter = 0; 	
-		for(unsigned char i = 0; i < 8; ++i) {
+		unsigned char i;
+		for(i = 0; i < 8; ++i) {
 			if (GetBit(tempA, i)) {
 				++counter;
 			}
 		}
-		for (unsigned char i = 0; i <8; ++i) {
+		for (i = 0; i <8; ++i) {
 			if (GetBit(tempB, i)) {
 				++counter;
 			}

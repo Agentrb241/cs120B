@@ -20,21 +20,22 @@ int main(void) {
     /* Insert DDR and PORT initializations */
 	DDRA = 0x00; PORTA = 0xFF; // Configure port A's 8 pins as inputs, initialize to 1s
 	DDRC = 0xFF; PORTC = 0x00; // Configure port B's 8 pins as outputs, initialize to 0s
-//	DDRB = 0x00; PORTB = 0xFF;
+	DDRB = 0x00; PORTB = 0xFF;
 	//unsigned char tmpB = 0x00; // You are UNABLE to read from output pins. Instead you
-//	unsigned char button = 0x00;
+	unsigned char button = 0x00;
     /* Insert your solution below */
-/*    while (1) {
+    while (1) {
 		unsigned char tempA = PINA;
 		unsigned char tempB = PINB;
 //		button = PINA & 0x01;
   		unsigned char counter = 0; 	
-		for(unsigned char i = 0; i < 8; ++i) {
+		unsigned char i;
+		for(i = 0; i < 8; ++i) {
 			if (GetBit(tempA, i)) {
 				++counter;
 			}
 		}
-		for (unsigned char i = 0; i <8; ++i) {
+		for (i = 0; i <8; ++i) {
 			if (GetBit(tempB, i)) {
 				++counter;
 			}
@@ -43,7 +44,7 @@ int main(void) {
 		PORTC = counter;
 
 	}
-*/
+/*
 
  
 while(1)
@@ -95,5 +96,6 @@ while(1)
 
 		PORTC = light | lowFuel | fastenbelt;
 	}	
-   return 0;
+*/ 
+  return 0;
 }
