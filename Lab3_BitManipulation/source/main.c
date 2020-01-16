@@ -1,5 +1,5 @@
 /*	Author: rbadi002
- *  Partner(s) Name: Rhea
+ *  Partner(s) Name: Rhea, Trevor 
  *	Lab Section:
  *	Assignment: Lab #  Exercise #
  *	Exercise Description: [optional - include for your own benefit]
