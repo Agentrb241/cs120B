@@ -93,7 +93,7 @@ while(1)
 		}
 
 
-		PORTC = light | lowFuel;
+		PORTC = light | lowFuel | fastenbelt;
 	}	
    return 0;
 }
