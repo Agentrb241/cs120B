@@ -1,4 +1,4 @@
-/	Author: rbadi002
+/*	Author: rbadi002
  *  Partner(s) Name: Rhea
  *	Lab Section:
  *	Assignment: Lab #  Exercise #
@@ -48,7 +48,7 @@ int main(void) {
  
 while(1)
 	{
-		unsigned char fuelLevel = PINA & 0x07;
+		unsigned char fuelLevel = PINA & 0x0F;
 		unsigned char light = 0;
 		unsigned char lowFuel = 0;
 //part 3	
